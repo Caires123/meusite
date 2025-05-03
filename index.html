@@ -5,23 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SPV - Hey Investidor</title>
   <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet"/>
-  
+  <link rel="icon" href="https://seufuturohoje.netlify.app/favicon.ico" />
+  <meta name="description" content="Aprenda a vender todos os dias com o método SPV. Primeira venda em 7 dias. Acesso imediato, vitalício e com garantia.">
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17048685420"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'AW-17048685420');
   </script>
 
   <style>
     :root {
-      --primary: #32cd32; /* verde limão */
+      --primary: #32cd32;
       --dark: #0a0a0a;
       --light: #eaeaea;
       --green-hover: #7fff7f;
+      --box-shadow: rgba(0, 0, 0, 0.2);
+      --highlight: rgba(50, 205, 50, 0.3);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -32,10 +35,7 @@
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
     header {
       text-align: center;
@@ -50,7 +50,6 @@
     }
 
     header p {
-      color: var(--light);
       font-size: 1.1rem;
       margin-bottom: 20px;
     }
@@ -122,8 +121,6 @@
       flex: 1;
       min-width: 260px;
       max-width: 320px;
-      position: relative;
-      overflow: hidden;
       animation: borderGlow 3s infinite alternate;
     }
 
@@ -151,25 +148,94 @@
       background: #000;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    ul { list-style: none; padding-left: 0; }
+    ul li { margin: 10px 0; }
+
+    .badge {
+      background: var(--primary);
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      display: inline-block;
+      margin: 15px 0;
     }
 
-    ul li {
-      margin: 10px 0;
+    .testimonial {
+      font-style: italic;
+      background: #111;
+      padding: 20px;
+      border-left: 4px solid var(--primary);
+      margin: 10px auto;
+      max-width: 600px;
+      border-radius: 8px;
     }
 
+    /* FAQ - Perguntas Frequentes */
     .faq-item {
       margin-bottom: 20px;
       text-align: left;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s forwards;
     }
 
-    .faq-item strong {
-      color: var(--primary);
+    .faq-item:nth-child(1) {
+      animation-delay: 0.2s;
     }
+    .faq-item:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .faq-item:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    .faq-item:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Caixa de mensagens para FAQ */
+    .faq-box {
+      background: #1a1a1a;
+      border: 1px solid var(--primary);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px var(--box-shadow);
+      transition: transform 0.3s ease-in-out;
+      margin-bottom: 20px;
+    }
+
+    .faq-box strong {
+      font-size: 1.2rem;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .faq-box p {
+      font-size: 1rem;
+      color: var(--light);
+      margin-top: 10px;
+    }
+
+    .faq-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .faq-box:active {
+      transform: translateY(0);
+    }
+
   </style>
 </head>
+
 <body>
 
   <header>
@@ -179,7 +245,7 @@
   </header>
 
   <section data-aos="fade-up">
-    <h2>Conheça o SPV</h2>
+    <h2>Assista Antes de Comprar</h2>
     <div class="video-container">
       <iframe src="https://www.youtube.com/embed/EiGOZvHlDuM" allowfullscreen></iframe>
     </div>
@@ -222,17 +288,39 @@
   </section>
 
   <section data-aos="fade-up">
+    <h2>Depoimentos Reais</h2>
+    <div class="testimonial">"Fiz minha primeira venda em 4 dias! Nunca imaginei que fosse possível!" – Ana M.</div>
+    <div class="testimonial">"O suporte da mentoria VIP me ajudou direto com tráfego pago. Top demais." – João V.</div>
+  </section>
+
+  <section data-aos="fade-up">
     <h2>Oferta Limitada</h2>
     <div class="price">11x de R$ 5,32<br>Ou R$ 47,90 à vista</div>
+    <span class="badge">Garantia de 7 dias</span><br>
     <a class="btn" href="https://pay.kiwify.com.br/oaM4C4L?afid=B8CSGxL8" target="_blank">Quero Acessar o SPV</a>
-    <p style="margin-top: 10px;">Garantia incondicional de 7 dias</p>
+    <p style="margin-top: 10px;">Sem risco. Experimente por 7 dias.</p>
   </section>
 
   <section data-aos="fade-up">
     <h2>Perguntas Frequentes</h2>
-    <div class="faq-item"><strong>Preciso ter experiência prévia?</strong><p>Não. O curso é ideal para iniciantes.</p></div>
-    <div class="faq-item"><strong>Como recebo o conteúdo?</strong><p>Tudo online, acessível de qualquer lugar.</p></div>
-    <div class="faq-item"><strong>Tem suporte?</strong><p>Sim! Mentoria VIP com o Hey Investidor.</p></div>
+    <div class="faq-item">
+      <div class="faq-box">
+        <strong>Preciso ter experiência prévia?</strong>
+        <p>Não. O curso é ideal para iniciantes.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-box">
+        <strong>Como recebo o conteúdo?</strong>
+        <p>Tudo online, acessível de qualquer lugar.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-box">
+        <strong>Tem suporte?</strong>
+        <p>Sim! Mentoria VIP com o Hey Investidor.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
